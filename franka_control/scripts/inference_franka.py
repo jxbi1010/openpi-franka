@@ -6,12 +6,11 @@ import tqdm
 from openpi.training import config as _config
 from openpi.policies import policy_config
 from openpi_client import image_tools
+from franka_control.camera import RealSenseCamera
+from franka_control.franka_state_reader import FrankaStateReader
+from franka_control.franka_commander import FrankaCommander
+from franka_control.robotiq import RobotiqInterface
 from franky import *
-
-from .camera import RealSenseCamera
-from .franka_state_reader import FrankaStateReader
-from .franka_commander import FrankaCommander
-from .robotiq import RobotiqInterface
 
 # from net_franky import setup_net_franky
 # setup_net_franky(ip="172.16.0.10", port=18812)
@@ -186,3 +185,4 @@ if __name__ == "__main__":
 
         if input("Do another rollout? (enter y or n) ").lower() != "y":
             break
+        
